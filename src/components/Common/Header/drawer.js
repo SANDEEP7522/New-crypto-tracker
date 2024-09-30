@@ -3,6 +3,7 @@ import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
 import Button from "../Button/button.index";
+import { Link } from "react-router-dom";
 
 export default function AnchorTemporaryDrawer() {
   const [open, setOpen] = useState(false);
@@ -15,21 +16,19 @@ export default function AnchorTemporaryDrawer() {
       <Drawer anchor={"right"} open={open} onClose={() => setOpen(false)}>
        
         <div className="menu-link">
-        <a href='/'>
+        <Link to='/'>
         <p className='links' >Home</p>
-        </a>
-        <a href='/'>
+        </Link>
+        <Link to='/compare'>
         <p className='links' >Compare</p>
-        </a>     
-        <a href='/'>
+        </Link>     
+        <Link to='/watchlish'>
         <p className='links' >WatchList</p>
-        </a>
-        <a href='#'>
-        <Button 
-        text={"DasBoard"}
-        onclick={() => console.log("button click")
-         }/>
-        </a>
+        </Link>
+        <Link to='/dasboard'>
+        <p className='links' >  DasBoard</p>
+        
+        </Link>
         </div>
       </Drawer>
     </div>
