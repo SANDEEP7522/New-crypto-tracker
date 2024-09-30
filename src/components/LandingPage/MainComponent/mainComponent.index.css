@@ -1,0 +1,116 @@
+.flex-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.5rem 3rem;
+}
+.track-crypto-heading,
+.track-time-heading {
+  font-size: 5rem;
+  margin: 0;
+}
+.track-crypto-heading {
+  color: var(--white);
+  -webkit-text-stroke: 3px darkgrey;
+  -webkit-text-fill-color: var(--white);
+}
+
+.track-crypto-heading:hover {
+  color: var(--blue);
+  -webkit-text-stroke: 3px darkgrey;
+  -webkit-text-fill-color: var(--black);
+  transition: all 0.3s;
+  text-shadow: 2px 7px 5px rgba(184, 243, 34, 0.6);
+}
+.track-time-heading {
+  color: var(--blue);
+  text-shadow: 2px 7px 5px rgba(100, 26, 241, 0.6);
+}
+.info-app {
+  font-size: 2vh;
+  color: var(--white);
+  margin: 0px;
+}
+.info-apps {
+  margin-top: 0px;
+  font-size: 2vh;
+  color: var(--white);
+}
+
+.button-flex {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.phone-right-compnente {
+  width: 37%;
+  position: relative;
+}
+.gif-img {
+  position: absolute;
+  z-index: 80;
+  height: 77vh;
+  min-width: 341px;
+  width: 37%;
+  right: 0;
+}
+.black-img {
+    right: -113px;
+    position: absolute;
+    min-width: 450px;
+    height: 85vh;
+    mix-blend-mode: multiply;
+    top: 2rem;
+}
+
+@media only screen and (max-width: 1250px) {
+    .track-crypto-heading,
+    .track-time-heading {
+      font-size: 5rem;
+      margin: 0;
+      margin-left: -1rem;
+    }
+}
+
+@media only screen and (max-width: 1025px) {  
+.gif-img {
+    min-width: 261px;
+    width: 40%;
+    height: 72vh;
+  }
+  .black-img {
+      min-width: 370px;
+      height: 77vh;
+  }
+}
+@media only screen and (max-width: 800px) {  
+    .flex-info {
+        flex-direction: column;
+    }
+    .phone-right-compnente{
+      margin: auto;
+      display: block;
+    }
+    .info-apps, .info-app {
+  text-align: center;
+    }
+    .track-crypto-heading,
+    .track-time-heading {
+      font-size: 4rem;
+     text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+
+    .gif-img {
+        left: -85%;
+        height: 57vh;
+
+      }
+      .black-img {
+        left: -65%;
+        height: 60vh;
+      }
+ }
