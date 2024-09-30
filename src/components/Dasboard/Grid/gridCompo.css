@@ -1,0 +1,98 @@
+.grid-coin-info{
+    height: 400px;
+    width: 300px;
+    background-color: #282626;
+    border: 2px solid #282626;
+    margin: 2px;
+    padding: 2px;
+    border-radius: 1rem;
+}
+.coin-all-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 2rem;
+}
+.coin-img{
+   height: 8vh;
+   width: 8vh;
+   
+}
+.name-col  symbol{
+    margin: 1px;
+    padding: 1px;
+}
+.rank{
+    font-weight: 150;
+    font-size: 0.7rem;
+    margin: 1px;
+    font-family: math;
+    font-style: normal;
+}
+.symbol{
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 100;
+    font-size: 0.8rem;
+    margin: 1px;
+}
+.name-col{
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: -2px;
+  }
+.chip-flex{
+display: flex;
+justify-content: flex-start;
+gap: 0.5rem;
+align-items: center;
+}
+.price-chip{
+    border: 3px solid var(--green);
+    color: var(--green);
+    border-radius: 2rem;
+    margin-left: 2rem;
+    padding: 0.3rem 1.4rem;
+}
+.price-chip:hover{
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 1s;
+}
+.chip-red{
+border: 3px solid var(--red);
+color: var(--red);
+}
+.chip-red:hover{
+   background-color: var(--red);
+    color: var(--white);
+    transition: all 1s;
+    }
+.price-chip-graph{
+    border: 3px solid var(--green);
+    color: var(--green);
+    border-radius: 3rem;
+    margin-left: 1rem;
+    padding: 0.1rem 0.7rem;
+}
+.price-chip-graph:hover{
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 1s;
+}
+.price-chip-GD{
+border: 3px solid var(--red);
+color: var(--red);
+border-radius: 3rem;
+margin-left: 1rem;
+padding: 0.1rem 0.7rem;
+}
+.price-chip-GD:hover{
+    background-color: var(--red);
+    color: var(--white);
+    transition: all 1s;
+   
+    }
