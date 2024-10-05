@@ -5,6 +5,7 @@ function ComparePage() {
   return (
     <div>
      <Header />
+     ComparePage
     </div>
   )
 }

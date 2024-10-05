@@ -33,8 +33,56 @@ function Grid({ coin, i }) {
           </div>
         </div>
       )}
+      <div className="current-price-container">
+        <h3
+          className="price-current"
+          style={{
+            color:
+              coin.market_cap_change_percentage_24h < 0
+                ? "var(--red)"
+                : "var(--green)",
+          }}
+        >
+          Price:- INR {coin.current_price.toLocaleString()}
+        </h3>
+      </div>
+      <div className="coin-max-supply">
+        <h4
+          className="max-supply"
+          style={{
+            color:
+              coin.market_cap_change_percentage_24h < 0
+                ? "var(--red)"
+                : "var(--green)",
+          }}
+        >
+          max_supply:-{coin.max_supply}{" "}
+        </h4>
+      </div>
 
-      
+      <p
+        className="total_volume"
+        style={{
+          color:
+            coin.market_cap_change_percentage_24h < 0
+              ? "var(--red)"
+              : "var(--green)",
+        }}
+      >
+        total_volume:- {coin.total_volume.toLocaleString()}
+      </p>
+
+      <p
+        className="market_cap"
+        style={{
+          color:
+            coin.market_cap_change_percentage_24h < 0
+              ? "var(--red)"
+              : "var(--green)",
+        }}
+      >
+        market_cap:- {coin.market_cap.toLocaleString()}
+      </p>
     </div>
   );
 }

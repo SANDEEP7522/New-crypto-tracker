@@ -2,7 +2,6 @@ import Drawer from "@mui/material/Drawer";
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
-import Button from "../Button/button.index";
 import { Link } from "react-router-dom";
 
 export default function AnchorTemporaryDrawer() {
