@@ -1,0 +1,24 @@
+.seach-box {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--gray);
+  width: 67%;
+  background-color: var(--darkgray);
+  margin: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #5d2727;
+  border-radius: 3rem;
+}
+.search-box-input {
+  background-color: var(--darkgray);
+  width: 100%;
+  border: none;
+  color: var(--white);
+}
+.search-box-input:focus{
+    outline: none;
+}
