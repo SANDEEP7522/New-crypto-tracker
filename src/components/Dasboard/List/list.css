@@ -1,0 +1,104 @@
+.List-row{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem;
+  border-radius: 1rem;
+  height: 4rem;
+}
+.List-row:hover{
+    background-color: #181313;
+    transition:  all 0.5s;
+   
+}
+.List-row {
+    text-align: left;
+
+ }
+.coin-img-td{
+    width: 3rem;
+    margin-right: -1rem;
+} 
+
+.total_volume-li,
+.market_cap-li {
+   
+    font-size: smaller;
+    font-style: oblique;
+    font-weight: 400;
+    text-align: left;
+}
+.mobile-td-mkt{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+ p.pcg,
+ .gd{
+    display: none;
+ }  
+
+ tr.List-row{
+    margin-left: -4.5rem;
+ } 
+ 
+.List-row:hover{
+    background-color: #181313;
+    transition:  all 0.5s;
+  
+}
+ }
+
+@media only screen and (max-width: 735px) {
+ 
+p.pc-media, .cr {
+    height: 0.6rem;
+    width: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.List-row:hover{
+    background-color: #181313;
+    transition:  all 0.5s;
+    width: 67vh;
+}
+}
+@media only screen and (max-width: 600px) {
+    .mobile-td-mkt{
+        display: none;
+      }
+      .cpcs{
+        font-size: small;
+      }
+}
+
+@media only screen and (max-width: 800px) {
+    .total_volume-li{
+        display: none;
+    }
+    
+    .market_cap-li {
+    display: none;
+}
+
+.mobile-td-mkt{
+    display: block;
+}
+}
+@media only screen and (max-width: 420px){
+    .mobile-td-mkt,  .market_cap-li{
+        display: none;
+    }
+    .List-row:hover{
+        background-color: #181313;
+        transition:  all 0.5s;
+        width: 55vh;
+    }
+    tr.List-row{
+        margin-left: -3.5rem;
+     } 
+}

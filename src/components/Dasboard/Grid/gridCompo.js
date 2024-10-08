@@ -6,7 +6,7 @@ import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 function Grid({ coin, i }) {
   return (
     <div className="grid-coin-info">
-      <div key={1} className="coin-all-info">
+      <div className="coin-all-info">
         <img className="coin-img" src={coin.image} />
         <div className="name-col">
           <p className="rank"> Rank : {coin.market_cap_rank}</p>
