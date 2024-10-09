@@ -4,6 +4,7 @@ import TabComponent from "../components/Dasboard/Tabs/TabComponent";
 import axios from "axios";
 import Search from "../components/Dasboard/Search/search";
 import Loder from "../components/Common/Loader/loder";
+import BackToTop from "../components/Common/BackToTop/backToTop";
 
 function DashboardPage() {
   const [coins, setCoins] = useState([]);
@@ -34,18 +35,23 @@ function DashboardPage() {
 
       .catch((error) => {
         console.log("something wents wrong", error);
-         setIsLoding(false);
+        setIsLoding(false);
       });
   }, []);
 
   return (
-    <div> {isLoding ? (  <Loder /> ) :(
     <div>
-    
-      <Header />
-      <Search search={search} onSearchChange={onSearchChange} />
-      <TabComponent coins={filterCoins} />
-    </div>) }
+      {" "}
+      {isLoding ? (
+        <Loder />
+      ) : (
+        <div>
+          <Header />
+          <Search search={search} onSearchChange={onSearchChange} />
+          <TabComponent coins={filterCoins} />
+          <BackToTop />
+        </div>
+      )}
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.returnTOTop {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -46px 12px; 
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    cursor: pointer;
+    right: 1.5rem;
+}
