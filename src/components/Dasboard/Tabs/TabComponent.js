@@ -10,6 +10,7 @@ import List from "../List/list";
 
 export default function TabComponent({ coins }) {
   const [value, setValue] = React.useState("Grid");
+  
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -19,6 +20,8 @@ export default function TabComponent({ coins }) {
   };
 
   return (
+
+
     <Box>
       <TabContext value={value}>
         <TabList onChange={handleChange} variant="fullWidth" className="tab">

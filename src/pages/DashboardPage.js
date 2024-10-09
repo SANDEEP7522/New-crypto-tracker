@@ -3,10 +3,12 @@ import Header from "../components/Common/Header/index.header";
 import TabComponent from "../components/Dasboard/Tabs/TabComponent";
 import axios from "axios";
 import Search from "../components/Dasboard/Search/search";
+import Loder from "../components/Common/Loader/loder";
 
 function DashboardPage() {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
+  const [isLoding, setIsLoding] = useState(true);
 
   const onSearchChange = (e) => {
     setSearch(e.target.value);
@@ -27,18 +29,23 @@ function DashboardPage() {
       .then((responce) => {
         console.log("Responce", responce);
         setCoins(responce.data);
+        setIsLoding(false);
       })
 
       .catch((error) => {
         console.log("something wents wrong", error);
+         setIsLoding(false);
       });
   }, []);
 
   return (
+    <div> {isLoding ? (  <Loder /> ) :(
     <div>
+    
       <Header />
       <Search search={search} onSearchChange={onSearchChange} />
       <TabComponent coins={filterCoins} />
+    </div>) }
     </div>
   );
 }
