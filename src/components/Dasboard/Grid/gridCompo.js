@@ -2,9 +2,11 @@ import React from "react";
 import "./gridCompo.css";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
+import { Link } from "react-router-dom";
 
 function Grid({ coin, i }) {
   return (
+    <Link to = {`/coin/${coin.id}`}>
     <div className="grid-coin-info">
       <div className="coin-all-info">
         <img className="coin-img" src={coin.image} />
@@ -83,7 +85,7 @@ function Grid({ coin, i }) {
       >
         market_cap:- {coin.market_cap.toLocaleString()}
       </p>
-    </div>
+    </div></Link>
   );
 }
 
