@@ -1,0 +1,18 @@
+.coin-info-heading, .coin-info-desc{
+ margin: 0.5rem;
+ padding-bottom: 1rem;
+ color: #efb6b6;
+ cursor: pointer;
+}
+
+
+.coin-info-desc a {
+     color: #9c9cbf !important; 
+    font-style: italic !important;
+    font-size: small !important;
+}
+
+.coin-info-desc a:hover {
+    color: #1010dd !important; 
+   
+}

@@ -30,8 +30,8 @@ function List({ coin }) {
           ) : (
             <div className="chip-flex">
               <p className="price-chip chip-red cr">
-                {/* here some problem resolve this */}
-                {coin.market_cap_change_percentage_24h}%  
+                {/* here some problem resolve this ert th  .toFixed(2)}%*/}
+                {coin.market_cap_change_percentage_24h}%
               </p>
               <p className="price-chip-GD  gd">
                 <TrendingDownIcon />

@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import Header from "../components/Common/Header/index.header";
 import axios from "axios";
 import { coinObject } from "../functions/convertObject";
-
 import Loader from "../components/Common/Loader/loader";
 import List from "../components/Dasboard/List/list";
+import CoinInfo from "../components/Coin/CoinInfo/coinInfo";
 
 function CoinPage() {
   const { id } = useParams();
@@ -40,6 +40,7 @@ function CoinPage() {
         <div className="gray-wrapper" >
           <List coin={coinData} />
         </div>
+        <CoinInfo heading={ coinData.name} desc={coinData.desc}/>
         </>
       )}
     </div>

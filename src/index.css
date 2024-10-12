@@ -54,8 +54,8 @@ img {
 .gray-wrapper{
   display: block;
   width: 90%;
-  background-color: var(--darkgray);
+  background-color: var(--gray);
   margin: 1.5rem auto;
   padding: 0rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
