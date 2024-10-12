@@ -1,8 +1,8 @@
 import React from 'react'
-import './loder.css'
+import './loader.css'
 
 
-function Loder() {
+function Loader() {
   return (
     <div>
         
@@ -43,4 +43,4 @@ function Loder() {
   )
 }
 
-export default Loder
+export default Loader;

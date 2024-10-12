@@ -4,29 +4,28 @@ import NavigationIcon from "@mui/icons-material/Navigation";
 
 function BackToTop() {
 
-  let mybutton = document.getElementById("myBtn");
-  window.onscroll = function () {
+  // let mybutton = document.getElementById("myBtn");
+  //    if (
+  //     document.body.scrollTop > 300 ||
+  //     document.documentElement.scrollTop > 300
+  //   ) {
+  //     mybutton.style.display = "flex";
+  //   } else {
+  //     mybutton.style.display = "none";
+  //   }
+  }
+ window.onscroll = function () {
     scrollFunction();
   };
 
   function scrollFunction() {
-    if (
-      document.body.scrollTop > 300 ||
-      document.documentElement.scrollTop > 300
-    ) {
-      mybutton.style.display = "flex";
-    } else {
-      mybutton.style.display = "none";
-    }
-  }
 
   function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
-
   return (
-    <div className="returnTOTop" id="myBtn" onClick={() => topFunction()}>
+    <div className="returnTOTop" id="myBtn" onClick={topFunction} style={{ display: "none" }}>
       <NavigationIcon />
     </div>
   );

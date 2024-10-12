@@ -16,9 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element= {<HomePage/>} />
           <Route path="/dasboard" element= {<DashboardPage/>} />
-          {/* <Route path="/CoinPage" element= {<CoinPage/>} />*/}
-          <Route path="/compare" element= {<ComparePage/>} />
-          <Route path="/watchlish" element= {<WatchlistPage/>} /> 
+          <Route path="/CoinPage/:id" element= {<CoinPage/>} />
+          {/* <Route path="/compare" element= {<ComparePage/>} />
+          <Route path="/watchlish" element= {<WatchlistPage/>} />  */}
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}

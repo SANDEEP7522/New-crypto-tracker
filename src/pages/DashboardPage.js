@@ -3,7 +3,7 @@ import Header from "../components/Common/Header/index.header";
 import TabComponent from "../components/Dasboard/Tabs/TabComponent";
 import axios from "axios";
 import Search from "../components/Dasboard/Search/search";
-import Loder from "../components/Common/Loader/loder";
+import Loder from "../components/Common/Loader/loader";
 import BackToTop from "../components/Common/BackToTop/backToTop";
 
 function DashboardPage() {
@@ -27,9 +27,9 @@ function DashboardPage() {
       .get(
         "https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&price_change_percentage=1d"
       )
-      .then((responce) => {
-        console.log("Responce", responce);
-        setCoins(responce.data);
+      .then((response) => {
+        console.log("Responce", response);
+        setCoins(response.data);
         setIsLoding(false);
       })
 

@@ -1,16 +1,14 @@
 .grid-coin-info {
-    background: rgba( 255, 255, 255, 0.2 );
-    box-shadow: 0 8px 32px 0 rgba(83, 92, 211, 0.37);
-    backdrop-filter: blur( 0px );
-    -webkit-backdrop-filter: blur( 0px );
-   
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    
-    height: 320px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(83, 92, 211, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  height: 320px;
   width: 320px;
   margin: 3px;
   padding: 3px;
-   border-radius: 1rem; 
+  border-radius: 1rem;
 }
 
 .coin-all-info {
@@ -116,9 +114,9 @@
 
 .total_volume,
 .market_cap {
-    margin: 1.5rem;
-    font-size: smaller;
-    font-style: oblique;
-    font-weight: 400;
-    margin-top: -17px;
+  margin: 1.5rem;
+  font-size: smaller;
+  font-style: oblique;
+  font-weight: 400;
+  margin-top: -17px;
 }
