@@ -1,5 +1,4 @@
 import React from 'react'
-import "./lineChart.css"
 import { Line } from "react-chartjs-2";
 import { Chart as chartjs } from 'chart.js/auto'; // This line might also need adjustment if you meant 'chart.js'
 
