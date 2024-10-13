@@ -1,0 +1,24 @@
+
+.toggle-button-volune{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1rem; 
+} 
+.toggle-button{
+    display: flex;
+    justify-content: center;
+    background-color: #817b7b;
+}
+@media only screen and (max-width: 600px) {
+    .toggle-button{
+        height: 20%;
+        width: 60%;
+    } 
+    .toggle-button-volune{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}

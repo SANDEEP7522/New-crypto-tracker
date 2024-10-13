@@ -1,14 +1,13 @@
-import { useState } from "react";
+
 import "./selectDays.css";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 
 export default function SelectDays( {days, handleDaysChange} ) {
   return (
     <div className="days">
-      <p>Days</p>
-      <Select
+      <p className="dayss" >Days</p>
+      <Select className="set"
         sx={{
           height: "2.5rem",
           color: "var(--white)",
