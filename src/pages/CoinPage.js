@@ -33,24 +33,8 @@ function CoinPage() {
     if (data) {
       coinObject(setCoinData, data);
       const prices = await getCoinPrices(id, days, priceType);
-      if (prices && prices.length > 0) {
+      if (Array.isArray(prices) &&prices.length > 0) {
         settingChartData(setChartData, prices);
-
-        // setChartData({
-        //   labels: prices.map((price) => convertDate(price[0])),
-        //   datasets: [
-        //     {
-        //       data: prices.map((price) => price[1]),
-        //       borderColor: "#3a80e9",
-        //       borderWidth: 1,
-        //       fill: true,
-        //       tension: 0.1,
-        //       backgroundColor: prices ? "transparent" : "#3a80e9",
-        //       pointRadius: 0,
-        //     },
-        //   ],
-        // });
-
         setIsLoading(false);
       }
     }
@@ -60,23 +44,58 @@ function CoinPage() {
     setIsLoading(true);
     setDays(event.target.value);
     const prices = await getCoinPrices(id, event.target.value, priceType);
-    if (prices && prices.length > 0) {
+console.log(prices);
+
+    if (Array.isArray(prices) &&prices.length > 0) {
       settingChartData(setChartData, prices);
       setIsLoading(false);
     }
   };
 
+//   const handlePriceTypeChange = async (event, newType) => {
+//     setIsLoading(true);
+//     setPriceType(newType);
+//     // setDays(event.target.value);
+//     const prices = await getCoinPrices(id, days, newType);
+//     console.log(prices);
+    
+//     if (Array.isArray(prices) && prices.length > 0) {
+//       settingChartData(setChartData, prices);
+//       setIsLoading(false);
+//     }
+// // console.log(newType);
+//   };
+
   const handlePriceTypeChange = async (event, newType) => {
     setIsLoading(true);
     setPriceType(newType);
-    // setDays(event.target.value);
-    const prices = await getCoinPrices(id, days, newType);
-    if (prices && prices.length > 0) {
-      settingChartData(setChartData, prices);
+    
+    try {
+      const prices = await getCoinPrices(id, days, newType);
+      console.log(prices);
+  
+      // Check if prices is an array and has items
+      if (Array.isArray(prices) && prices.length > 0) {
+        settingChartData(setChartData, prices);
+      } else {
+        console.warn('Prices is not an array or is empty:', prices);
+      }
+    } catch (error) {
+      console.error('Error fetching coin prices:', error);
+    } finally {
       setIsLoading(false);
     }
-// console.log(newType);
   };
+  
+
+
+
+
+
+
+
+
+
 
   return (
     <div>
@@ -94,7 +113,7 @@ function CoinPage() {
               priceType={priceType}
               handlePriceTypeChange={handlePriceTypeChange}
             />
-            <LineChart chartData={chartData} />
+            <LineChart chartData={chartData} priceType={priceType}/>
           </div>
 
           <CoinInfo heading={coinData.name} desc={coinData.desc} />
