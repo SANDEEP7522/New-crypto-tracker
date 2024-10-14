@@ -33,7 +33,7 @@ function CoinPage() {
     if (data) {
       coinObject(setCoinData, data);
       const prices = await getCoinPrices(id, days, priceType);
-      if (Array.isArray(prices) &&prices.length > 0) {
+      if (Array.isArray(prices) && prices.length > 0) {
         settingChartData(setChartData, prices);
         setIsLoading(false);
       }
@@ -44,58 +44,34 @@ function CoinPage() {
     setIsLoading(true);
     setDays(event.target.value);
     const prices = await getCoinPrices(id, event.target.value, priceType);
-console.log(prices);
+    console.log(prices);
 
-    if (Array.isArray(prices) &&prices.length > 0) {
+    if (Array.isArray(prices) && prices.length > 0) {
       settingChartData(setChartData, prices);
       setIsLoading(false);
     }
   };
 
-//   const handlePriceTypeChange = async (event, newType) => {
-//     setIsLoading(true);
-//     setPriceType(newType);
-//     // setDays(event.target.value);
-//     const prices = await getCoinPrices(id, days, newType);
-//     console.log(prices);
-    
-//     if (Array.isArray(prices) && prices.length > 0) {
-//       settingChartData(setChartData, prices);
-//       setIsLoading(false);
-//     }
-// // console.log(newType);
-//   };
-
   const handlePriceTypeChange = async (event, newType) => {
     setIsLoading(true);
     setPriceType(newType);
-    
+
     try {
       const prices = await getCoinPrices(id, days, newType);
       console.log(prices);
-  
+
       // Check if prices is an array and has items
       if (Array.isArray(prices) && prices.length > 0) {
         settingChartData(setChartData, prices);
       } else {
-        console.warn('Prices is not an array or is empty:', prices);
+        console.warn("Prices is not an array or is empty:", prices);
       }
     } catch (error) {
-      console.error('Error fetching coin prices:', error);
+      console.error("Error fetching coin prices:", error);
     } finally {
       setIsLoading(false);
     }
   };
-  
-
-
-
-
-
-
-
-
-
 
   return (
     <div>
@@ -113,7 +89,7 @@ console.log(prices);
               priceType={priceType}
               handlePriceTypeChange={handlePriceTypeChange}
             />
-            <LineChart chartData={chartData} priceType={priceType}/>
+            <LineChart chartData={chartData} priceType={priceType} />
           </div>
 
           <CoinInfo heading={coinData.name} desc={coinData.desc} />
