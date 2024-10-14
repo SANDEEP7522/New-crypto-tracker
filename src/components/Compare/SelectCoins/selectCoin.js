@@ -4,10 +4,10 @@ import { get100Coins } from "../../../functions/get100Coins";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 
-function SelectCoins() {
-  const [crypto1, setCrypto1] = useState("bitcoin");
-  const [crypto2, setCrypto2] = useState("ethereum");
-  const [allCoins, setAllCoins] = useState([]);
+function SelectCoins({crypto1, crypto2, handleCoinChange}) {
+  // const [crypto1, setCrypto1] = useState("bitcoin");
+  // const [crypto2, setCrypto2] = useState("ethereum");
+   const [allCoins, setAllCoins] = useState([]);
 
 
   const style = {
@@ -26,15 +26,15 @@ function SelectCoins() {
     },
   };
 
-  const handleCoinChange = (event, isCoin2) => {
-    if (isCoin2) {
-      setCrypto2(event.target.value);
-      console.log("coin_id_2", event.target.value);
-    } else {
-    setCrypto1(event.target.value);
-    console.log("coin_id)_1", event.target.value);
-      }
-  };
+  // const handleCoinChange = (event, isCoin2) => {
+  //   if (isCoin2) {
+  //     setCrypto2(event.target.value);
+  //     console.log("coin_id_2", event.target.value);
+  //   } else {
+  //   setCrypto1(event.target.value);
+  //   console.log("coin_id)_1", event.target.value);
+  //     }
+  // };
 
   useEffect(() => {
   getData();

@@ -1,14 +1,22 @@
 .days{
     display: flex;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     margin: 1rem;
-    margin-top: 1rem;
+    margin-top: -3rem;
+
 }
 @media only screen and (max-width: 600px) {
     .dayss{
         display: none;
     }
-
+    .days{
+        margin-top: -1rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .days{
+        margin-top: -1rem;
+    }
 }
