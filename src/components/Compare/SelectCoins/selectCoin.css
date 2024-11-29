@@ -4,6 +4,7 @@
     align-items: center;
     margin: 1rem;
     gap: 0.8rem;
+    color: #505067;
 }
 @media only screen and (max-width: 800px) {  
     .coin-select p{

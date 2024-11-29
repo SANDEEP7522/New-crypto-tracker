@@ -1,9 +1,12 @@
 import { convertDate } from "./convertDate";
 
 export const settingChartData = (setChartData, prices1, prices2) => {
-  if (prices2) {
+  console.log("ppp12", prices1, prices2);
+  
+  
+  if (prices2) { 
     setChartData({
-      labels: prices1.map((price) => convertDate(price[0])),
+      labels: prices1?.map((price) => convertDate(price[0])),
       datasets: [
         {
           label: "crypto1",
@@ -40,7 +43,7 @@ export const settingChartData = (setChartData, prices1, prices2) => {
           borderWidth: 1,
           fill: true,
           tension: 0.1,
-          backgroundColor: "#3a80e9",
+          backgroundColor: "#505067",
           pointRadius: 0,
           yAxisID: "crypto1",
         },

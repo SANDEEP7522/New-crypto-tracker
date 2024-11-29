@@ -40,7 +40,7 @@
  }  
 
  tr.List-row{
-    margin-left: -4.5rem;
+    margin-left: -0.5rem;
  } 
  
 .List-row:hover{
@@ -64,7 +64,7 @@ p.pc-media, .cr {
 .List-row:hover{
     background-color: #181313;
     transition:  all 0.5s;
-    width: 67vh;
+    width: 68vh;
 }
 }
 @media only screen and (max-width: 600px) {

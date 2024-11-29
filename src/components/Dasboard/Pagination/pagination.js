@@ -7,6 +7,9 @@ export default function PaginationComponect({ page, handlePageChange }) {
   return (
     <div className="pagination-div">
       <Pagination
+        count={10}
+        page={page}
+        onChange={handlePageChange}
         sx={{
           "& .MuiPaginationItem-text": {
             color: "#fff !important",
@@ -23,9 +26,7 @@ export default function PaginationComponect({ page, handlePageChange }) {
             border: "none",
           },
         }}
-        count={10}
-        page={page}
-        onChange={handlePageChange}
+        
       />
     </div>
   );

@@ -17,7 +17,7 @@ function LineChart({ chartData, priceType, multiAxis }) {
     },
     scales: {
       crypto1: {
-        type: "Linear",
+        type: "linear",
         display: "true",
         position: "left",
         ticks: {
@@ -31,7 +31,7 @@ function LineChart({ chartData, priceType, multiAxis }) {
         },
       },
       crypto2: {
-        type: "Linear",
+        type: "linear",
         display: "true",
         position: "right",
         ticks: {

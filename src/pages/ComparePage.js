@@ -29,6 +29,8 @@ function ComparePage() {
     const prices1 = await getCoinPrices(crypto1, event.target.value, priceType);
     const prices2 = await getCoinPrices(crypto2, event.target.value, priceType);
     settingChartData(setChartData, prices1, prices2);
+    console.log("Both Prices add", prices1, prices2);
+
     setIsLoading(false);
   }
 
@@ -63,6 +65,7 @@ function ComparePage() {
       coinObject(setCrypto2Data, data);
       const prices1 = await getCoinPrices(crypto1, days, priceType);
       const prices2 = await getCoinPrices(crypto2, days, priceType);
+      
       if (
         Array.isArray(prices1) &&
         prices1.length > 0 &&
